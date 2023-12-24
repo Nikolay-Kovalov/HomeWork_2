@@ -76,15 +76,13 @@ function onDomLoaded(status) {
         if (navList.children[2] && navList.children[1]) {
                navList.children[2].remove();
             navList.children[1].remove();
-        } else {
+        } else if(navList.children[1]) {
             navList.children[1].remove(); 
         }
     }
 }
 
 function onUserSelectChange(evt) {
-
-    console.log(evt.target.value)
     if (evt.target.value === "Admin") {
         if (navList.children[2] && navList.children[1]) {
             navList.children[2].remove();
