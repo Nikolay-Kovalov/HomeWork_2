@@ -37,27 +37,27 @@ function renderNavLink(status) {
             li1.appendChild(link1);
             navList.append(li2, li1);
             break;
+        case 'User': 
+            break
         default:
             break;
    } 
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    onDomLoaded(statusArr[1])
+    onDomLoaded(statusArr[2])
 })
 
 function onDomLoaded(status) {
     if (status === "Admin") {
-
         renderNavLink("Admin")
-    
 
     } else if (status === "Owner") {
-   
         renderNavLink("Owner")
-         
- 
-    } 
+            
+    } else if (status === "User") {
+        return
+    }
 }
 
 
